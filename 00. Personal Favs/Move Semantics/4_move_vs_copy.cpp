@@ -7,6 +7,10 @@
 
 class School {
     public:
+
+        /*  
+            The multiple loops are just for the sake of creating a big object to test for the differences between copy and move constructors execution time.
+        */
         School(){
             std::string m = "";
             for(int x=0; x<10; x++){
@@ -25,6 +29,15 @@ class School {
             // std::cout << "Default Constructor" << std::endl;
         }
 
+        /**
+         * This is a copy constructor for the School class that copies the category and majors from
+         * another School object.
+         * 
+         * @param other `other` is a reference to another `School` object that is being passed as a
+         * parameter to the copy constructor of the `School` class. The copy constructor is used to
+         * create a new object that is a copy of an existing object. In this case, the `other` object
+         * is the
+         */
         School(const School& other){
             
             this->category = other.category;
@@ -33,6 +46,15 @@ class School {
             // std::cout << "Copy Constructor" << std::endl;
         }
 
+        /**
+         * This is a move constructor in C++ that moves the category and majors data members from
+         * another School object.
+         * 
+         * @param other `other` is a reference to an object of the `School` class that is being moved
+         * from. It is an rvalue reference, indicated by the double ampersand `&&`, which means that it
+         * can only bind to temporary objects or objects that are explicitly marked as movable using
+         * `std::
+         */
         School(School&& other){
 
             this->category = std::move(other.category);
@@ -40,10 +62,6 @@ class School {
 
             // std::cout << "Move Constructor" << std::endl;
         }
-
-        // ~School(){
-        //     std::cout << "Destructor" << std::endl;
-        // }
 
     private:
         std::vector<std::string> majors;
@@ -54,6 +72,14 @@ std::map<int, std::vector<int>> copy_move_value;
 std::vector<std::thread> tr;
 int x = 10000;
 
+
+/**
+ * The function "worker" performs iterations and measures the execution time of copying and moving
+ * constructors for a class called "School".
+ * 
+ * @param T The parameter T is an integer representing the worker's ID or thread number. It is used to
+ * identify which worker is executing the code when multiple workers are running concurrently.
+ */
 void worker(int T){
     while(x > 0){
         std::cout << "T" << T <<" - Iteration: " << x << std::endl;
@@ -88,6 +114,12 @@ void worker(int T){
 };
 
 
+/**
+ * The function measures the execution time of copy and move constructors in C++ and calculates their
+ * average values.
+ * 
+ * @return The main function is returning an integer value of 0.
+ */
 int main(){
 
     for(int T = 0; T < 4; T++){
