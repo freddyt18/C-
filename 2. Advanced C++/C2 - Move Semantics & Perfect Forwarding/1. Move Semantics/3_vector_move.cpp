@@ -72,11 +72,14 @@ int main(){
     /* for(auto each : ID){
         std::cout << "Pushing " << each << std::endl;
         
-        // Pushing a new `Move_Vector` object into the `Example` vector, using a pointer to a string as
-        // e argument for the constructor. However, this can lead to unexpected behavior because the
-        // ove_Vector` class takes ownership of the string pointer and deletes it in its destructor.
-        // multiple `Move_Vector` objects are created with the same string pointer, they will all
-        // y to delete it, leading to undefined behavior.
+
+        // Pushing `Move_Vector` objects into the `Example` vector using a pointer to a string (`each`)
+        // that was dynamically allocated in the `ID` vector. However, this can lead to undefined
+        // behavior because the `Move_Vector` constructor takes a pointer to a string, but the `ID`
+        // vector is not guaranteed to keep the string objects in memory for the lifetime of the
+        // `Example` vector. This can result in accessing memory that has already been deallocated,
+        // leading to unpredictable behavior. 
+
         Example.push_back(
             Move_Vector{each}
         );
