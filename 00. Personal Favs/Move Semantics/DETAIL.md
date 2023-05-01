@@ -12,8 +12,10 @@ In C++
 - **Move Constructor**, on the other hand, creates a new object by "stealing" the resources of an existing object. In other words, it moves the resources from the source object to the destination object, rather than creating new resources.
 
 To illustrate the performance differences between copy and move constructors, I created a sample code that initializes a vector of integers with a given number of instances. I then measured the execution time of the copy constructor and the move constructor for various numbers of instances. 
+<br>
+<br>
+Here are the results:
 <hr>
-Here are the results: <br>
 
 | Number of Instances | Copy Constructor Time (ns) | Move Constructor Time (ns) | Copy/Move Ratio |
 |---------------------|---------------------------|-----------------------------|-----------------|
