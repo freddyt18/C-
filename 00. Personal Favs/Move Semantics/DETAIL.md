@@ -11,12 +11,14 @@ In C++
 - **Copy Constructor** is a special constructor that creates a new object by initializing it with an existing object. 
 - **Move Constructor**, on the other hand, creates a new object by "stealing" the resources of an existing object. In other words, it moves the resources from the source object to the destination object, rather than creating new resources.
 
-<center>
 
-![Move VS Copy](https://learn.microsoft.com/en-us/cpp/cpp/media/unique_ptr.png?view=msvc-170)
-<br>Image obtained from [Microsoft Learn](https://learn.microsoft.com/en-us/cpp/cpp/how-to-create-and-use-unique-ptr-instances?view=msvc-170).
 
-</center>
+<p align="center">
+  <img src="https://learn.microsoft.com/en-us/cpp/cpp/media/unique_ptr.png?view=msvc-170" alt="Copy VS Move"/>
+  <br>Image obtained from <a href="https://learn.microsoft.com/en-us/cpp/cpp/how-to-create-and-use-unique-ptr-instances?view=msvc-170">Microsoft Learn</a>.
+</p>
+
+
 
 To illustrate the performance differences between copy and move constructors, I created a sample code that initializes a vector of integers with a given number of instances. I then measured the execution time of the copy constructor and the move constructor for various numbers of instances. 
 <br>
