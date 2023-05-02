@@ -18,7 +18,7 @@
 
 2. Advanced C++
     - ~~Smart pointers and memory management techniques.~~
-    - Move semantics and perfect forwarding.
+    - ~~Move semantics and perfect forwarding.~~
     - Type traits and static reflection.
     - Template metaprogramming and constexpr functions.
     - Design patterns, such as singleton, factory, observer, and visitor.
