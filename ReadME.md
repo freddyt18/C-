@@ -19,9 +19,9 @@
 2. Advanced C++
     - ~~Smart pointers and memory management techniques.~~
     - ~~Move semantics and perfect forwarding.~~
-    - Type traits and static reflection.
-    - Template metaprogramming and constexpr functions.
-    - Design patterns, such as singleton, factory, observer, and visitor.
+    - ~~Type traits and static reflection.~~
+    - ~~Template metaprogramming and constexpr functions.~~
+    - ~~Design patterns, such as singleton, factory, observer, and visitor.~~
     - Advanced object-oriented programming concepts, such as multiple inheritance, abstract classes, and interfaces.
     - Operator overloading and advanced operator techniques.
     - The C++ Standard Library advanced topics, such as concurrency and networking.
